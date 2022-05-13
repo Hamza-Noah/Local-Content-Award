@@ -14,7 +14,7 @@ ul {
   list-style: none;
 }
 
-button{
+button {
   border: none;
   outline: none;
 }
@@ -36,4 +36,41 @@ a {
 }
 
 @import "colors";
+
+.head-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+  h2 {
+    position: relative;
+    color: $bold-blue;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      width: 120px;
+      height: 5px;
+      background-color: $gold;
+    }
+
+    &::before {
+      right: 300px;
+    }
+
+    &::after {
+      left: 300px;
+    }
+  }
+  p {
+    font-size: 1.2rem;
+    color: $text-color;
+  }
+}
+
 @import "header";
+@import "award";
+@import "paths"
