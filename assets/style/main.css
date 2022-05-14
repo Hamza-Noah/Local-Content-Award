@@ -261,19 +261,20 @@ header .time-left ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: #1a3d60;
+  color: #0faad0;
 }
 
 header .time-left li {
   position: relative;
 }
 
-header .time-left li:not(:last-child) {
+header .time-left li:not(:last-child)::after {
   content: ":";
   font-weight: 900;
+  font-size: 2rem;
   left: 0;
+  top: 100px;
   color: white;
-  position: absolute;
 }
 
 .award {
@@ -379,6 +380,8 @@ header .time-left li:not(:last-child) {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .paths .path-title {
@@ -427,20 +430,88 @@ header .time-left li:not(:last-child) {
 .paths .path-info {
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
-  padding: 30px;
+  padding: 40px;
   border-radius: 0 30px 0 30px;
   background-color: rgba(255, 255, 255, 0.8);
-  color: #54565b;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  font-size: 1.7rem;
-  line-height: 1.7;
   opacity: 0;
   display: none;
 }
 
+.paths .path-info p {
+  color: #54565b;
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
 .paths .path-info a {
   display: block;
-  margin: auto;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0 15px 0 15px;
+  background-color: #0faad0;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.journey {
+  padding-block: 100px;
+}
+
+.journey .row {
+  margin: 200px auto 0;
+  width: 70%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.journey .column .winner-feature {
+  position: relative;
+}
+
+.journey .column .winner-feature > .img {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #b3a16d;
+  border: solid 2px #8a7c52;
+}
+
+.journey .column .info {
+  position: absolute;
+}
+
+.journey .column .info:first-child {
+  left: 100px;
+}
+
+.journey .column .info img {
+  width: 220px;
+}
+
+.journey .winner-feature > .img:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -105px;
+  background-color: #b3a16d;
+  width: 2px;
+  height: 90px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -104,7 +104,7 @@ header {
       background-color: #020c1f;
     }
   }
-  
+
   nav {
     .row {
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -128,7 +128,7 @@ header {
     height: calc(100vh - 72px);
     text-align: center;
   }
-  
+
   .info {
     height: 100%;
     padding-block: 150px;
@@ -159,21 +159,22 @@ header {
     margin: auto;
   }
 
-  .time-left ul{
+  .time-left ul {
     display: flex;
     justify-content: space-between;
-    color: $bold-blue;
+    color: $light-blue;
   }
 
-  .time-left li{
+  .time-left li {
     position: relative;
   }
 
-  .time-left li:not(:last-child){
+  .time-left li:not(:last-child)::after {
     content: ":";
     font-weight: 900;
+    font-size: 2rem;
     left: 0;
+    top: 100px;
     color: white;
-    position: absolute;
   }
 }

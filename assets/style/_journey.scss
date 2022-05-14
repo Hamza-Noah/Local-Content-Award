@@ -1,0 +1,45 @@
+.journey {
+  padding-block: 100px;
+  .row {
+    margin: 200px auto 0;
+    width: 70%;
+    justify-content: center;
+  }
+
+  .column {
+    .winner-feature {
+      position: relative;
+    }
+    .winner-feature > .img {
+      position: relative;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $gold;
+      border: solid 2px #8a7c52;
+    }
+    .info {
+      position: absolute;
+    }
+
+    .info:first-child{
+       left: 100px
+    }
+
+    .info img{
+       width: 220px;
+    }
+  }
+  .winner-feature > .img:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: -105px;
+    background-color: $gold;
+    width: 2px;
+    height: 90px;
+  }
+}
