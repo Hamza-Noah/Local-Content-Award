@@ -26,20 +26,60 @@
       position: absolute;
     }
 
-    .info:first-child{
-       left: 100px
+    .winner-feature:first-child .info,
+    .winner-feature:nth-child(3) .info {
+      left: 300px;
+      top: -50px;
     }
 
-    .info img{
-       width: 220px;
+    .winner-feature:nth-child(2) .info,
+    .winner-feature:last-child .info {
+      right: 300px;
+      top: -50px;
+    }
+
+    .winner-feature:first-child .info img,
+    .winner-feature:nth-child(3) .info img {
+      border-radius: 30px 0 30px;
+    }
+
+    .winner-feature:nth-child(2) .info img,
+    .winner-feature:last-child .info img {
+      border-radius: 0 30px 0 30px;
+    }
+
+    .info img {
+      width: 220px;
     }
   }
-  .winner-feature > .img:not(:last-child)::after {
+
+  .winner-feature::before {
     content: "";
+    transform: translateY(-50%);
+    top: 50%;
     position: absolute;
-    bottom: -105px;
+    background-color: $gold;
+    width: 160px;
+    height: 2px;
+  }
+
+  .winner-feature:first-child::before,
+  .winner-feature:nth-child(3)::before {
+    left: 100px;
+  }
+  .winner-feature:nth-child(2)::before,
+  .winner-feature:last-child::before {
+    right: 120px;
+  }
+
+  .winner-feature:not(:last-child)::after {
+    content: "";
+    right: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom:  -115px;
     background-color: $gold;
     width: 2px;
-    height: 90px;
+    height: 110px;
   }
 }

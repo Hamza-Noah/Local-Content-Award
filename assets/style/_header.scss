@@ -152,9 +152,8 @@ header {
 
   .info .time-left {
     border-radius: 10px;
-    height: 100px;
-    width: 400px;
-    padding: 40px;
+    width: 450px;
+    padding: 20px 40px;
     background-color: rgba(0, 0, 0, 0.7);
     margin: auto;
   }
@@ -162,7 +161,15 @@ header {
   .time-left ul {
     display: flex;
     justify-content: space-between;
-    color: $light-blue;
+    color: #3f6f87;
+  }
+
+  .time-left span{
+    color: white;
+    margin-bottom: 15px;
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
   }
 
   .time-left li {
@@ -171,10 +178,10 @@ header {
 
   .time-left li:not(:last-child)::after {
     content: ":";
-    font-weight: 900;
-    font-size: 2rem;
-    left: 0;
-    top: 100px;
+    position: absolute;
+    left: -40px;
+    top: -5px;
+    font-size: 3rem;
     color: white;
   }
 }
