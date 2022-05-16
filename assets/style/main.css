@@ -279,7 +279,7 @@ header .time-left li:not(:last-child)::after {
   content: ":";
   position: absolute;
   left: -40px;
-  top: -5px;
+  top: -8px;
   font-size: 3rem;
   color: white;
 }
@@ -347,6 +347,18 @@ header .time-left li:not(:last-child)::after {
   background-size: cover;
 }
 
+.paths .container {
+  height: 100%;
+}
+
+.paths .row {
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
 .paths .path.governmental-entities {
   background-image: url("../images/entities.png");
 }
@@ -359,14 +371,17 @@ header .time-left li:not(:last-child)::after {
   background-image: url("../images/individuals.jpeg");
 }
 
-.paths .path:hover .path-info {
-  display: block;
+.paths .path:hover .path-title {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  right: 13%;
 }
 
-.paths .path:hover .row {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.paths .path:hover .path-info {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  left: 0;
 }
 
 .paths .path:hover .path-title::before,
@@ -374,28 +389,18 @@ header .time-left li:not(:last-child)::after {
   display: none;
 }
 
-.paths .container {
-  height: 100%;
-}
-
-.paths .row {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-}
-
 .paths .path-title {
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
   position: relative;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
   background-color: white;
   border-radius: 0 30px 0 30px;
   padding: 30px;
   text-align: center;
+  z-index: 2;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 .paths .path-title h3 {
@@ -430,12 +435,17 @@ header .time-left li:not(:last-child)::after {
 }
 
 .paths .path-info {
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 600px;
   padding: 40px;
   border-radius: 0 30px 0 30px;
   background-color: rgba(255, 255, 255, 0.8);
-  display: none;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 .paths .path-info p {
@@ -470,11 +480,11 @@ header .time-left li:not(:last-child)::after {
           justify-content: center;
 }
 
-.journey .column .winner-feature {
+.journey .winner-feature {
   position: relative;
 }
 
-.journey .column .winner-feature > .img {
+.journey .winner-feature > .img-feature {
   position: relative;
   height: 100px;
   width: 100px;
@@ -491,36 +501,90 @@ header .time-left li:not(:last-child)::after {
           align-items: center;
   background-color: #b3a16d;
   border: solid 2px #8a7c52;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
-.journey .column .info {
+.journey .img,
+.journey .info {
   position: absolute;
 }
 
-.journey .column .winner-feature:first-child .info,
-.journey .column .winner-feature:nth-child(3) .info {
+.journey .info {
+  height: 200px;
+  top: 20px;
+  overflow: hidden;
+}
+
+.journey .info p {
+  width: 500px;
+  color: #54565b;
+  line-height: 1.7;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.journey .info i {
+  margin-right: 5px;
+  border-radius: 50%;
+  border: solid 2px #0faad0;
+  padding: 3px;
+  font-size: .3rem;
+}
+
+.journey .info a {
+  color: #0faad0;
+  font-weight: 700;
+}
+
+.journey .winner-feature:first-child .img,
+.journey .winner-feature:nth-child(3) .img {
   left: 300px;
   top: -50px;
 }
 
-.journey .column .winner-feature:nth-child(2) .info,
-.journey .column .winner-feature:last-child .info {
+.journey .winner-feature:first-child .info,
+.journey .winner-feature:nth-child(3) .info {
+  right: 120px;
+}
+
+.journey .winner-feature:first-child .info p,
+.journey .winner-feature:nth-child(3) .info p {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.journey .winner-feature:nth-child(2) .img,
+.journey .winner-feature:last-child .img {
   right: 300px;
   top: -50px;
 }
 
-.journey .column .winner-feature:first-child .info img,
-.journey .column .winner-feature:nth-child(3) .info img {
+.journey .winner-feature:nth-child(2) .info,
+.journey .winner-feature:last-child .info {
+  left: 120px;
+}
+
+.journey .winner-feature:nth-child(2) .info p,
+.journey .winner-feature:last-child .info p {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.journey .winner-feature:first-child .img img,
+.journey .winner-feature:nth-child(3) .img img {
   border-radius: 30px 0 30px;
 }
 
-.journey .column .winner-feature:nth-child(2) .info img,
-.journey .column .winner-feature:last-child .info img {
+.journey .winner-feature:nth-child(2) .img img,
+.journey .winner-feature:last-child .img img {
   border-radius: 0 30px 0 30px;
 }
 
-.journey .column .info img {
+.journey .img img {
   width: 220px;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
 .journey .winner-feature::before {
@@ -530,18 +594,18 @@ header .time-left li:not(:last-child)::after {
   top: 50%;
   position: absolute;
   background-color: #b3a16d;
-  width: 160px;
+  width: 190px;
   height: 2px;
 }
 
 .journey .winner-feature:first-child::before,
 .journey .winner-feature:nth-child(3)::before {
-  left: 100px;
+  left: 104px;
 }
 
 .journey .winner-feature:nth-child(2)::before,
 .journey .winner-feature:last-child::before {
-  right: 120px;
+  right: 104px;
 }
 
 .journey .winner-feature:not(:last-child)::after {
@@ -554,6 +618,38 @@ header .time-left li:not(:last-child)::after {
   background-color: #b3a16d;
   width: 2px;
   height: 110px;
+}
+
+.journey .winner-feature:hover:first-child .img-feature,
+.journey .winner-feature:hover:nth-child(3) .img-feature {
+  border-radius: 20px 0 20px;
+}
+
+.journey .winner-feature:hover:nth-child(2) .img-feature,
+.journey .winner-feature:hover:last-child .img-feature {
+  border-radius: 0 20px 0 20px;
+}
+
+.journey .winner-feature:hover .img-feature {
+  border: none;
+  background-color: #b3a16d;
+}
+
+.journey .winner-feature:hover:first-child .img img,
+.journey .winner-feature:hover:nth-child(3) .img img {
+  -webkit-box-shadow: 15px 15px #b3a16d;
+          box-shadow: 15px 15px #b3a16d;
+}
+
+.journey .winner-feature:hover:nth-child(2) .img img,
+.journey .winner-feature:hover:last-child .img img {
+  -webkit-box-shadow: -15px 15px #b3a16d;
+          box-shadow: -15px 15px #b3a16d;
+}
+
+.journey .winner-feature:hover .info p {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 footer {

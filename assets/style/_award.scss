@@ -1,9 +1,11 @@
 .award {
   padding-block: 150px;
+
   .row {
     position: relative;
     justify-content: flex-end;
   }
+
   .info {
     position: absolute;
     right: 0;
@@ -15,8 +17,9 @@
     background-color: rgba(255, 255, 255, 0.8);
     color: $text-color;
     line-height: 1.7;
+
     h2 {
-    font-size: 1.5rem;
+      font-size: 1.5rem;
 
       margin-bottom: 10px;
       color: $bold-blue;
@@ -32,16 +35,16 @@
 
     }
 
-    a{
-        color: $light-blue;
+    a {
+      color: $light-blue;
     }
 
-    i{
-        border-radius: 50%;
-        border: solid 3px $light-blue;
-        padding: 6px 5px 5px 5px;
-        margin-left: 5px;
-        font-size: .9rem;
+    i {
+      border-radius: 50%;
+      border: solid 3px $light-blue;
+      padding: 6px 5px 5px 5px;
+      margin-left: 5px;
+      font-size: .9rem;
     }
   }
 

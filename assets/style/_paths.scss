@@ -6,6 +6,17 @@
     background-size: cover;
   }
 
+  .container {
+    height: 100%;
+  }
+
+  .row {
+    position: relative;
+    align-items: center;
+    height: 100%;
+  }
+
+
   .path.governmental-entities {
     background-image: url("../images/entities.png");
   }
@@ -18,12 +29,19 @@
     background-image: url("../images/individuals.jpeg");
   }
 
-  .path:hover .path-info {
-    display: block;
-  }
+  .path:hover {
 
-  .path:hover .row {
-    justify-content: space-between;
+    .path-title {
+      transform: translateX(0);
+      right: 13%;
+
+    }
+
+    .path-info {
+      opacity: 1;
+      transform: translateX(0);
+      left: 0;
+    }
   }
 
   .path:hover .path-title::before,
@@ -31,23 +49,18 @@
     display: none;
   }
 
-  .container {
-    height: 100%;
-  }
-
-  .row {
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
 
   .path-title {
-    flex-basis: 35%;
     position: relative;
+    right: 50%;
+    transform: translateX(50%);
     background-color: white;
     border-radius: 0 30px 0 30px;
     padding: 30px;
     text-align: center;
+    z-index: 2;
+    transition: all .3s linear;
+
     h3 {
       font-size: 2.5rem;
       margin-bottom: 20px;
@@ -81,11 +94,16 @@
   }
 
   .path-info {
-    flex-basis: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
     padding: 40px;
     border-radius: 0 30px 0 30px;
     background-color: rgba(255, 255, 255, 0.8);
-    display: none;
+    position: absolute;
+    opacity: 0;
+    transition: all .3s linear;
+
     p {
       color: $text-color;
       font-size: 1.4rem;

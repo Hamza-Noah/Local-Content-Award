@@ -1,56 +1,112 @@
 .journey {
   padding-block: 100px;
+
   .row {
     margin: 200px auto 0;
     width: 70%;
     justify-content: center;
   }
 
-  .column {
-    .winner-feature {
-      position: relative;
-    }
-    .winner-feature > .img {
-      position: relative;
-      height: 100px;
-      width: 100px;
-      border-radius: 50%;
-      margin-bottom: 120px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: $gold;
-      border: solid 2px #8a7c52;
-    }
-    .info {
-      position: absolute;
-    }
+  .winner-feature {
+    position: relative;
+  }
 
-    .winner-feature:first-child .info,
-    .winner-feature:nth-child(3) .info {
+  .winner-feature>.img-feature {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $gold;
+    border: solid 2px #8a7c52;
+    transition: all .2s linear;
+
+  }
+
+  .img,
+  .info {
+    position: absolute;
+  }
+
+  .info {
+    height: 200px;
+    top: 20px;
+    overflow: hidden;
+  }
+
+  .info p {
+    width: 500px;
+    color: $text-color;
+    line-height: 1.7;
+    transition: all .2s linear;
+  }
+
+  .info i {
+    margin-right: 5px;
+    border-radius: 50%;
+    border: solid 2px $light-blue;
+    padding: 3px;
+    font-size: .3rem;
+  }
+
+  .info a {
+    color: $light-blue;
+    font-weight: 700;
+  }
+
+  .winner-feature:first-child,
+  .winner-feature:nth-child(3) {
+    .img {
       left: 300px;
       top: -50px;
     }
 
-    .winner-feature:nth-child(2) .info,
-    .winner-feature:last-child .info {
+    .info {
+
+      right: 120px;
+    }
+
+    .info p {
+      transform: translateX(100%);
+    }
+  }
+
+  .winner-feature:nth-child(2),
+  .winner-feature:last-child {
+    .img {
       right: 300px;
       top: -50px;
     }
 
-    .winner-feature:first-child .info img,
-    .winner-feature:nth-child(3) .info img {
-      border-radius: 30px 0 30px;
+    .info {
+      left: 120px;
+
     }
 
-    .winner-feature:nth-child(2) .info img,
-    .winner-feature:last-child .info img {
-      border-radius: 0 30px 0 30px;
+    .info p {
+
+      transform: translateX(-100%);
     }
 
-    .info img {
-      width: 220px;
-    }
+  }
+
+  .winner-feature:first-child .img img,
+  .winner-feature:nth-child(3) .img img {
+    border-radius: 30px 0 30px;
+  }
+
+  .winner-feature:nth-child(2) .img img,
+  .winner-feature:last-child .img img {
+    border-radius: 0 30px 0 30px;
+  }
+
+  .img img {
+    width: 220px;
+    transition: all .2s linear;
+
   }
 
   .winner-feature::before {
@@ -59,17 +115,18 @@
     top: 50%;
     position: absolute;
     background-color: $gold;
-    width: 160px;
+    width: 190px;
     height: 2px;
   }
 
   .winner-feature:first-child::before,
   .winner-feature:nth-child(3)::before {
-    left: 100px;
+    left: 104px;
   }
+
   .winner-feature:nth-child(2)::before,
   .winner-feature:last-child::before {
-    right: 120px;
+    right: 104px;
   }
 
   .winner-feature:not(:last-child)::after {
@@ -77,9 +134,43 @@
     right: 50%;
     transform: translateX(-50%);
     position: absolute;
-    bottom:  -115px;
+    bottom: -115px;
     background-color: $gold;
     width: 2px;
     height: 110px;
+  }
+
+  .winner-feature:hover {
+
+    &:first-child .img-feature,
+    &:nth-child(3) .img-feature {
+      border-radius: 20px 0 20px;
+    }
+
+    &:nth-child(2) .img-feature,
+    &:last-child .img-feature {
+      border-radius: 0 20px 0 20px;
+    }
+
+    .img-feature {
+      border: none;
+      background-color: $gold;
+
+    }
+
+
+
+     &:first-child .img img,
+    &:nth-child(3) .img img {
+      box-shadow: 15px 15px $gold;
+    }
+     &:nth-child(2) .img img,
+    &:last-child .img img {
+      box-shadow: -15px 15px $gold;
+    }
+
+    .info p {
+      transform: translateX(0);
+    }
   }
 }
