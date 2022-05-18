@@ -160,11 +160,12 @@
 
 
 
-     &:first-child .img img,
+    &:first-child .img img,
     &:nth-child(3) .img img {
       box-shadow: 15px 15px $gold;
     }
-     &:nth-child(2) .img img,
+
+    &:nth-child(2) .img img,
     &:last-child .img img {
       box-shadow: -15px 15px $gold;
     }

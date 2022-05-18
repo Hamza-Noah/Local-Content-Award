@@ -26,10 +26,34 @@ a {
 }
 
 .container {
-  width: 1170px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-inline: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 
 .row {
@@ -81,6 +105,139 @@ a {
   color: #54565b;
 }
 
+.uppperbar {
+  padding-block: 30px;
+  background-color: #000;
+  font-size: 0.8rem;
+  -webkit-box-shadow: 0 20px 100px 50px #000;
+          box-shadow: 0 20px 100px 50px #000;
+}
+
+.uppperbar .row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.uppperbar .navbar-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.uppperbar .navbar-brand img {
+  height: 40px;
+}
+
+.uppperbar .options {
+  padding-block: 15px;
+}
+
+.uppperbar .options .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.uppperbar .options .account {
+  padding-inline: 10px;
+  border-left: solid 2px rgba(255, 255, 255, 0.4);
+}
+
+.uppperbar .options .account a i {
+  padding-left: 5px;
+}
+
+.uppperbar .options .account .drowdown-menu {
+  margin-inline: 5px;
+  color: white;
+  background-color: transparent;
+}
+
+.uppperbar .options .state {
+  padding-inline: 20px;
+  padding-block: 2px;
+  border-left: solid 1.5px rgba(255, 255, 255, 0.7);
+}
+
+.uppperbar .options .state i {
+  padding-left: 5px;
+}
+
+.uppperbar .options .notification {
+  position: relative;
+  padding-inline: 20px;
+  border-left: solid 1.5px rgba(255, 255, 255, 0.7);
+  font-size: 10px;
+}
+
+.uppperbar .options .notification::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 19px;
+  width: 6px;
+  height: 6px;
+  background-color: #cc0000;
+  border: white solid 2px;
+  border-radius: 50%;
+}
+
+.uppperbar .options .search {
+  position: relative;
+  padding-right: 15px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.uppperbar .options .search input {
+  width: 100px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  color: white;
+  background-color: transparent;
+}
+
+.uppperbar .options .search::after {
+  content: "\f002";
+  position: absolute;
+  font-family: "fontAwesome";
+  font-size: 16px;
+  right: -7px;
+  top: 4px;
+}
+
+.uppperbar .options .search input[type="search"]::-webkit-search-decoration,
+.uppperbar .options input[type="search"]::-webkit-search-cancel-button,
+.uppperbar .options input[type="search"]::-webkit-search-results-button,
+.uppperbar .options input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.uppperbar .options button.language {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 0 15px 0 15px;
+  background-color: #b3a16d;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  .uppperbar .navbar-brand img {
+    height: 40px;
+  }
+  .uppperbar .options {
+    display: none;
+  }
+}
+
 header {
   height: 100vh;
   background-image: url("../images/header.jpeg");
@@ -90,108 +247,6 @@ header {
   -webkit-box-shadow: inset 0px -30px 20px -0px #000;
           box-shadow: inset 0px -30px 20px -0px #000;
   color: white;
-}
-
-header .uppperbar {
-  padding-block: 30px;
-  background-color: #000;
-  font-size: 0.8rem;
-  -webkit-box-shadow: 0 20px 100px 50px #000;
-          box-shadow: 0 20px 100px 50px #000;
-}
-
-header .uppperbar .row {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-header .uppperbar .options {
-  padding-block: 15px;
-}
-
-header .uppperbar .options i {
-  font-size: 1rem;
-}
-
-header .uppperbar .account {
-  padding-inline: 10px;
-  border-left: solid 2px rgba(255, 255, 255, 0.4);
-}
-
-header .uppperbar .account a i {
-  padding-left: 5px;
-}
-
-header .uppperbar .account .drowdown-menu {
-  margin-right: 3px;
-  color: white;
-  background-color: transparent;
-}
-
-header .uppperbar .state {
-  padding-inline: 20px;
-  padding-block: 2px;
-  border-left: solid 1.5px rgba(255, 255, 255, 0.7);
-}
-
-header .uppperbar .state i {
-  padding-left: 5px;
-}
-
-header .uppperbar .notification {
-  position: relative;
-  padding-inline: 20px;
-}
-
-header .uppperbar .notification::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  right: 18px;
-  width: 6px;
-  height: 6px;
-  background-color: #cc0000;
-  border: white solid 2px;
-  border-radius: 50%;
-}
-
-header .uppperbar .search {
-  position: relative;
-  border-left: 1px solid white;
-  padding-right: 15px;
-  margin-left: 20px;
-  cursor: pointer;
-}
-
-header .uppperbar .search input {
-  width: 100px;
-  border-radius: 15px;
-  border: none;
-  outline: none;
-  padding: 5px;
-  background-color: #020c1f;
-  color: white;
-}
-
-header .uppperbar .search::after {
-  content: "\f002";
-  font-family: "fontAwesome";
-  position: absolute;
-  left: 24px;
-  top: 7px;
-}
-
-header .uppperbar .search input[type="search"]::-webkit-search-decoration,
-header .uppperbar input[type="search"]::-webkit-search-cancel-button,
-header .uppperbar input[type="search"]::-webkit-search-results-button,
-header .uppperbar input[type="search"]::-webkit-search-results-decoration {
-  display: none;
-}
-
-header .uppperbar button.language {
-  color: white;
-  background-color: #020c1f;
 }
 
 header nav .row {
