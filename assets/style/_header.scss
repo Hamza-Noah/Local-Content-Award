@@ -23,6 +23,12 @@ header {
     }
   }
 
+  @media (max-width: 991px) {
+    nav {
+      display: none;
+    }
+  }
+
   .landing {
     display: flex;
     align-items: center;
@@ -78,12 +84,40 @@ header {
     position: relative;
   }
 
-  .time-left li:not(:last-child)::after {
+  .time-left li:not(:last-child) span::after {
     content: ":";
     position: absolute;
     left: -40px;
     top: -8px;
     font-size: 3rem;
     color: white;
+  }
+
+  @media (max-width: 991px) {
+    .info h1 {
+      font-size: 1.2rem;
+      margin-inline: 15px;
+    }
+
+    .info a{
+      font-size: .8rem;
+      padding-inline: 30px;
+    }
+
+    .info .time-left{
+      width: 250px;
+    }
+
+    .info span{
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+  .time-left li:not(:last-child) span::after {
+    left: -10px;
+  }
+
+
   }
 }

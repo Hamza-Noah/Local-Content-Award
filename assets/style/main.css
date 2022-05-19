@@ -35,6 +35,7 @@ a {
 @media (max-width: 575px) {
   .container {
     width: 90%;
+    padding-inline: 00px !important;
   }
 }
 
@@ -231,7 +232,7 @@ a {
 
 @media (max-width: 767px) {
   .uppperbar .navbar-brand img {
-    height: 40px;
+    height: 25px;
   }
   .uppperbar .options {
     display: none;
@@ -263,6 +264,12 @@ header nav .row {
 header nav a {
   font-weight: 700;
   font-size: 1.1rem;
+}
+
+@media (max-width: 991px) {
+  header nav {
+    display: none;
+  }
 }
 
 header .landing {
@@ -330,13 +337,39 @@ header .time-left li {
   position: relative;
 }
 
-header .time-left li:not(:last-child)::after {
+header .time-left li:not(:last-child) span::after {
   content: ":";
   position: absolute;
   left: -40px;
   top: -8px;
   font-size: 3rem;
   color: white;
+}
+
+@media (max-width: 991px) {
+  header .info h1 {
+    font-size: 1.2rem;
+    margin-inline: 15px;
+  }
+  header .info a {
+    font-size: .8rem;
+    padding-inline: 30px;
+  }
+  header .info .time-left {
+    width: 250px;
+  }
+  header .info span {
+    font-size: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .time-left li:not(:last-child) span::after {
+    left: -10px;
+  }
 }
 
 .award {
