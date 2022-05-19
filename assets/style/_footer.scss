@@ -74,4 +74,25 @@ footer {
         margin-bottom: 30px;
     }
 
+    @media (max-width: 768px) {
+        .row{
+            flex-wrap: wrap;
+        }
+        .column{
+            width: 100% !important;
+            text-align: center;
+        }
+
+        .column.links ul{
+            margin-block: 50px;
+            width: 100%;
+        }
+        .contacts  .social-icons{
+            justify-content: center;
+        }
+        .contacts address{
+            text-align: center;
+        }
+    }
+
 }

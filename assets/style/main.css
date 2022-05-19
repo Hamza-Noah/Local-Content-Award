@@ -331,6 +331,7 @@ header .time-left span {
   display: block;
   font-size: 2rem;
   font-weight: 800;
+  text-align: center;
 }
 
 header .time-left li {
@@ -359,16 +360,21 @@ header .time-left li:not(:last-child) span::after {
     width: 250px;
   }
   header .info span {
-    font-size: 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.2rem;
   }
   header .time-left li:not(:last-child) span::after {
+    font-size: 1rem;
     left: -10px;
+    top: 1px;
   }
 }
 
@@ -426,6 +432,22 @@ header .time-left li:not(:last-child) span::after {
 
 .award img {
   border-radius: 0 50px 0 50px;
+}
+
+@media (max-width: 991px) {
+  .award .info {
+    position: static;
+    margin: auto;
+  }
+  .award .info h2 {
+    font-size: 1.4rem;
+  }
+  .award .info p {
+    font-size: .9rem;
+  }
+  .award .img {
+    display: none;
+  }
 }
 
 .paths .path {
@@ -819,5 +841,28 @@ footer .contacts address i {
 
 footer .img {
   margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  footer .row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .column {
+    width: 100% !important;
+    text-align: center;
+  }
+  footer .column.links ul {
+    margin-block: 50px;
+    width: 100%;
+  }
+  footer .contacts .social-icons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .contacts address {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=main.css.map */

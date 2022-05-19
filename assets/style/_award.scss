@@ -51,4 +51,26 @@
   img {
     border-radius: 0 50px 0 50px;
   }
+
+  @media (max-width: 991px) {
+    
+    .info{
+
+      position: static;
+      margin: auto;
+    }
+
+    .info h2{
+      font-size: 1.4rem;
+    }
+
+    .info p{
+      font-size: .9rem;
+    }
+
+    .img{
+      display: none;
+    }
+  }
+
 }
