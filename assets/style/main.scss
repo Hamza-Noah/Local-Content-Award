@@ -24,7 +24,7 @@ a {
   color: inherit;
 }
 
-.container{
+.container {
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
@@ -35,18 +35,15 @@ a {
 // extra small screens 
 @media(max-width: 575px) {
   .container {
-      width: 90%;
-      padding-inline: 00px !important;
+    width: 90%;
+    padding-inline: 00px !important;
   }
 }
-
-// mobile and tablet rules
-@media(min-width: 576px) and (max-width: 767px) {}
 
 // small screen rules 
 @media (min-width: 768px) and(max-width: 991px) {
   .container {
-      width: 750px;
+    width: 750px;
 
   }
 }
@@ -54,14 +51,14 @@ a {
 // medium screen rules 
 @media (min-width: 992px) and (max-width: 1199px) {
   .container {
-      width: 970px;
+    width: 970px;
   }
 }
 
 // large screen rules 
 @media (min-width: 1200px) {
   .container {
-      width: 1170px;
+    width: 1170px;
   }
 }
 
@@ -79,16 +76,19 @@ a {
   align-items: center;
   flex-direction: column;
   margin-bottom: 100px;
+
   h2 {
     position: relative;
     color: $bold-blue;
     font-size: 2.5rem;
     margin-bottom: 40px;
+
     &::before,
     &::after {
       content: "";
       position: absolute;
-      top: 25px;
+      top: 50%;
+      transform: translateY(-50%);
       width: 120px;
       height: 5px;
       background-color: $gold;
@@ -101,10 +101,40 @@ a {
     &::after {
       left: 300px;
     }
+
   }
+
   p {
     font-size: 1.2rem;
     color: $text-color;
+  }
+
+  @media (max-width: 767px) {
+    & {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 1.8rem !important;
+    }
+
+    h2::before,
+    h2::after {
+      width: 90px;
+    }
+
+    h2::before {
+      right: 240px;
+    }
+
+    h2::after {
+      left: 240px;
+    }
+
+    p {
+      font-size: 1rem;
+      text-align: center
+    }
   }
 }
 

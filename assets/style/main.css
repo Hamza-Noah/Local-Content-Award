@@ -87,7 +87,9 @@ a {
 .head-section h2::before, .head-section h2::after {
   content: "";
   position: absolute;
-  top: 25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 120px;
   height: 5px;
   background-color: #b3a16d;
@@ -104,6 +106,29 @@ a {
 .head-section p {
   font-size: 1.2rem;
   color: #54565b;
+}
+
+@media (max-width: 767px) {
+  .head-section {
+    margin-bottom: 30px;
+  }
+  .head-section h2 {
+    font-size: 1.8rem !important;
+  }
+  .head-section h2::before,
+  .head-section h2::after {
+    width: 90px;
+  }
+  .head-section h2::before {
+    right: 240px;
+  }
+  .head-section h2::after {
+    left: 240px;
+  }
+  .head-section p {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 
 .uppperbar {
@@ -438,6 +463,8 @@ header .time-left li:not(:last-child) span::after {
   .award .info {
     position: static;
     margin: auto;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .award .info h2 {
     font-size: 1.4rem;
