@@ -508,24 +508,6 @@ header .time-left li:not(:last-child) span::after {
   background-image: url("../images/individuals.jpeg");
 }
 
-.paths .path:hover .path-title {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  right: 13%;
-}
-
-.paths .path:hover .path-info {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  left: 0;
-}
-
-.paths .path:hover .path-title::before,
-.paths .path:hover .path-title::after {
-  display: none;
-}
-
 .paths .path-title {
   position: relative;
   right: 50%;
@@ -603,6 +585,30 @@ header .time-left li:not(:last-child) span::after {
   color: white;
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+@media (min-width: 991px) {
+  .paths .path:hover .path-title {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    right: 13%;
+  }
+  .paths .path:hover .path-info {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    left: 0;
+  }
+  .paths .path:hover .path-title::before,
+  .paths .path:hover .path-title::after {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .paths .path-title h3 {
+    font-size: 2.2rem;
+  }
 }
 
 .journey {

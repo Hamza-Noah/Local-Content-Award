@@ -29,27 +29,6 @@
     background-image: url("../images/individuals.jpeg");
   }
 
-  .path:hover {
-
-    .path-title {
-      transform: translateX(0);
-      right: 13%;
-
-    }
-
-    .path-info {
-      opacity: 1;
-      transform: translateX(0);
-      left: 0;
-    }
-  }
-
-  .path:hover .path-title::before,
-  .path:hover .path-title::after {
-    display: none;
-  }
-
-
   .path-title {
     position: relative;
     right: 50%;
@@ -120,6 +99,32 @@
       color: white;
       font-size: 1.1rem;
       font-weight: 500;
+    }
+  }
+
+  @media(min-width: 991px) {
+    .path:hover {
+      .path-title {
+        transform: translateX(0);
+        right: 13%;
+      }
+
+      .path-info {
+        opacity: 1;
+        transform: translateX(0);
+        left: 0;
+      }
+    }
+
+    .path:hover .path-title::before,
+    .path:hover .path-title::after {
+      display: none;
+    }
+  }
+
+  @media(max-width: 991px) {
+    .path-title h3 {
+      font-size: 2.2rem;
     }
   }
 }
