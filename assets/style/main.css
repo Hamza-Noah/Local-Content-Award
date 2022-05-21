@@ -9,6 +9,7 @@ body {
   direction: rtl;
   font-family: "Cairo", sans-serif;
   height: 2000px;
+  overflow-x: hidden;
 }
 
 ul {
@@ -793,6 +794,12 @@ header .time-left li:not(:last-child) span::after {
 .journey .winner-feature:hover .info p {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+@media (max-width: 767px) {
+  .journey {
+    display: none;
+  }
 }
 
 footer {

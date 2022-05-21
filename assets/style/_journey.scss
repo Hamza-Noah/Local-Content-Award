@@ -172,4 +172,10 @@
       transform: translateX(0);
     }
   }
+
+  @media (max-width: 767px) {
+    &{
+      display: none;
+    }
+  }
 }
