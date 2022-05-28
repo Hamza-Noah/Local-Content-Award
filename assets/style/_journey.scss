@@ -113,9 +113,10 @@
 
   .info a {
     display: inline-block;
-    color: $light-blue !important;
+    color: $light-blue  !important;
     padding: 0 25px;
   }
+
 
   li:hover {
     .feature p {
@@ -159,7 +160,6 @@
 
   @media (max-width: 767px) {
     .winner-feature {
-      // margin-bottom: 80px;
       flex-direction: column !important;
     }
 
@@ -170,7 +170,7 @@
     .feature::after {
       content: "";
       position: absolute;
-      width: 3px;
+      width: 2px;
       height: 100px;
       left: 0%;
       right: 50%;
@@ -180,23 +180,25 @@
       transition: all 0.3s ease-in;
     }
 
-    .info::after{
+    .info::after {
       content: "";
       position: absolute;
-      width: 3px;
       height: 100px;
-      left: -20px;
+      bottom: -200px;
+      width: 2px;
+      right: 50%;
+      transform: translateX(-50%);
       background-color: $gold;
     }
+
 
     .info p {
       width: 280px;
       padding: 20px;
-      border: solid 2px $gold !important;
+      border: solid 2px $gold  !important;
       text-align: justify;
       font-size: 0.8rem;
       transform: translateY(-120%);
-      z-index: 3;
     }
 
     li:nth-child(odd) .info p {
@@ -208,8 +210,8 @@
     }
 
     li:hover {
-      &:not(:last-child) .feature {
-        margin-bottom: 100px;
+      & .feature {
+        margin-bottom: 50px;
       }
 
       .feature::after {

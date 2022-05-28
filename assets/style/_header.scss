@@ -1,17 +1,19 @@
 header {
   position: relative;
   height: 162px;
-  z-index: 20;
+  z-index: 10;
+
   .uppperbar {
     padding-block: 20px;
     font-size: 0.8rem;
     color: white;
+
     .navbar-brand img {
       height: 2.3rem;
     }
   }
 
-  .navbar-dark.bg-dark{
+  .navbar-dark.bg-dark {
     background-color: transparent !important;
   }
 
@@ -25,7 +27,7 @@ header {
   }
 
   .account .drowdown-menu {
-    margin-inline: 5px;
+    padding: 0 5px;
     color: white;
     background-color: transparent;
   }
@@ -75,6 +77,10 @@ header {
     background-color: transparent;
   }
 
+  .search input::-moz-focus-inner {
+    border-color: transparent;
+  }
+
   .search input[type="search"]::-webkit-search-decoration,
   input[type="search"]::-webkit-search-cancel-button,
   input[type="search"]::-webkit-search-results-button,
@@ -91,22 +97,19 @@ header {
     font-weight: 700;
   }
 
-  .navbar-toggler-icon{
-    color: white !important;
-    border-color: white;
-  }
 
   @media (max-width: 767px) {
     .navbar-collapse {
-      margin-top: 40px;
+      margin-top: 140px;
     }
+
     .navbar-brand img {
       height: 25px;
     }
 
-   .navbar-nav{
-     display: none;
-   }
+    .navbar-nav {
+      display: none;
+    }
 
     .account,
     .state {
@@ -151,7 +154,7 @@ nav {
     background-color: $gold;
     border-radius: 5px;
   }
-  
+
 }
 
 @media (max-width: 991px) {
@@ -159,4 +162,3 @@ nav {
     display: none;
   }
 }
-

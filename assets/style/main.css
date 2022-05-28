@@ -92,7 +92,7 @@ a {
 header {
   position: relative;
   height: 162px;
-  z-index: 20;
+  z-index: 10;
 }
 
 header .uppperbar {
@@ -119,7 +119,7 @@ header .account a i {
 }
 
 header .account .drowdown-menu {
-  margin-inline: 5px;
+  padding: 0 5px;
   color: white;
   background-color: transparent;
 }
@@ -169,6 +169,10 @@ header .search input {
   background-color: transparent;
 }
 
+header .search input::-moz-focus-inner {
+  border-color: transparent;
+}
+
 header .search input[type="search"]::-webkit-search-decoration,
 header input[type="search"]::-webkit-search-cancel-button,
 header input[type="search"]::-webkit-search-results-button,
@@ -185,14 +189,9 @@ header button.language {
   font-weight: 700;
 }
 
-header .navbar-toggler-icon {
-  color: white !important;
-  border-color: white;
-}
-
 @media (max-width: 767px) {
   header .navbar-collapse {
-    margin-top: 40px;
+    margin-top: 140px;
   }
   header .navbar-brand img {
     height: 25px;
@@ -933,7 +932,7 @@ nav .about-award a:hover {
   .journey .feature::after {
     content: "";
     position: absolute;
-    width: 3px;
+    width: 2px;
     height: 100px;
     left: 0%;
     right: 50%;
@@ -947,9 +946,12 @@ nav .about-award a:hover {
   .journey .info::after {
     content: "";
     position: absolute;
-    width: 3px;
     height: 100px;
-    left: -20px;
+    bottom: -200px;
+    width: 2px;
+    right: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     background-color: #b3a16d;
   }
   .journey .info p {
@@ -960,7 +962,6 @@ nav .about-award a:hover {
     font-size: 0.8rem;
     -webkit-transform: translateY(-120%);
             transform: translateY(-120%);
-    z-index: 3;
   }
   .journey li:nth-child(odd) .info p {
     border-radius: 20px 0 20px 0;
@@ -968,8 +969,8 @@ nav .about-award a:hover {
   .journey li:nth-child(even) .info p {
     border-radius: 0 20px 0;
   }
-  .journey li:hover:not(:last-child) .feature {
-    margin-bottom: 100px;
+  .journey li:hover .feature {
+    margin-bottom: 50px;
   }
   .journey li:hover .feature::after {
     bottom: -210px;
