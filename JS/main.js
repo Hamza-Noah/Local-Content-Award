@@ -18,10 +18,10 @@ let counter = setInterval(() => {
   let minutes = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((dateDiff % (1000 * 60)) / 1000);
 
-  document.querySelectorِAll(".days span").innerHTML = days;
-  document.querySelectorِAll(".hours span").innerHTML = hours;
-  document.querySelectorِAll(".minutes span").innerHTML = minutes;
-  document.querySelectorِAll(".seconds span").innerHTML = seconds;
+  document.querySelectorِ(".days span").innerHTML = days;
+  document.querySelectorِ(".hours span").innerHTML = hours;
+  document.querySelectorِ(".minutes span").innerHTML = minutes;
+  document.querySelectorِ(".seconds span").innerHTML = seconds;
 
   if (dateDiff < 0) {
     clearInterval(counter);
