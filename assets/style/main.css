@@ -214,7 +214,7 @@ header button.language {
   }
 }
 
-nav .about-award {
+.nav .about-award {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -226,18 +226,18 @@ nav .about-award {
   color: white;
 }
 
-nav .about-award-hidden {
+.nav .about-award-hidden {
   display: none;
 }
 
-nav .about-award a {
+.nav .about-award a {
   padding: 10px 15px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 
-nav .about-award a.active,
-nav .about-award a:hover {
+.nav .about-award a.active,
+.nav .about-award a:hover {
   background-color: #b3a16d;
   border-radius: 5px;
 }
