@@ -7,22 +7,28 @@
   }
 
   .info {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
     width: 700px;
-    padding: 20px;
-    border-right: solid 10px $gold;
+    padding: 30PX;
+    margin-left: 50px;
     background-color: rgba(255, 255, 255, 0.8);
     color: $text-color;
     line-height: 1.7;
 
     h2 {
+      margin-bottom: 15px;
       font-size: 1.5rem;
-
-      margin-bottom: 10px;
       color: $bold-blue;
+      position: relative;
+      font-weight: 900;
+    }
+
+    h2::before{
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 8px;
+      background-color: $gold;
+      right: -20px;
     }
 
     h2 span {
@@ -32,7 +38,6 @@
     p {
       margin-bottom: 10px;
       font-size: 1.3rem;
-
     }
 
     a {
@@ -41,37 +46,55 @@
 
     i {
       border-radius: 50%;
-      border: solid 3px $light-blue;
-      padding: 6px 5px 5px 5px;
+      border: solid 2px $light-blue;
+      padding: 6px 5px 4px;
       margin-left: 5px;
-      font-size: .9rem;
+      color: $light-blue;
+      font-size: 0.9rem;
     }
   }
 
   img {
     border-radius: 0 50px 0 50px;
+    width: 500px;
   }
 
   @media (max-width: 991px) {
-    
-    .info{
-
-      position: static;
-      margin: auto;
-      transform: translateY(0);
+    & {
+      padding-block: 75px;
     }
 
-    .info h2{
+    h2::before{
+      right: -5px;
+      width: 5px;
+    }
+
+    .d-flex {
+      flex-flow: wrap column;
+      align-items: center;
+      padding: 0 15px;
+    }
+
+    .info {
+      position: static;
+      margin: auto;
+      margin-left: 0;
+      margin-bottom: 40px !important;
+      padding: 0 20px;
+      max-width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 0 20px 0;
+    }
+
+    .info h2 {
       font-size: 1.4rem;
     }
 
-    .info p{
-      font-size: .9rem;
-    }
-
-    .img{
-      display: none;
+    .info p {
+      font-size: 0.9rem;
     }
   }
-
 }

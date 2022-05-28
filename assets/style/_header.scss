@@ -1,126 +1,162 @@
 header {
-  height: 100vh;
-  background-image: url("../images/header.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  box-shadow: inset 0px -30px 20px -0px #000;
-  color: white;
-
-  nav {
-    .row {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      margin: auto;
-      width: 70%;
-      margin-top: 20px;
-      justify-content: space-between;
-      padding-bottom: 15px;
-    }
-
-    a {
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-  }
-
-  @media (max-width: 991px) {
-    nav {
-      display: none;
-    }
-  }
-
-  .landing {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 72px);
-    text-align: center;
-  }
-
-  .info {
-    height: 100%;
-    padding-block: 150px;
-  }
-
-  .info h1 {
-    font-size: 1.8rem;
-    margin-bottom: 80px;
-  }
-
-  .info a {
-    padding: 12px 40px;
-    margin-bottom: 60px;
-    border-radius: 0 20px 0 20px;
-    border: solid 2px white;
-    display: inline-block;
-    font-size: 1.5rem;
-    font-weight: 700;
-    background-color: $light-blue;
-  }
-
-  .info .time-left {
-    border-radius: 10px;
-    width: 450px;
-    padding: 20px 40px;
-    background-color: rgba(0, 0, 0, 0.7);
-    margin: auto;
-  }
-
-  .time-left ul {
-    display: flex;
-    justify-content: space-between;
-    color: #3f6f87;
-  }
-
-  .time-left span {
+  position: relative;
+  height: 162px;
+  z-index: 20;
+  .uppperbar {
+    padding-block: 20px;
+    font-size: 0.8rem;
     color: white;
-    margin-bottom: 15px;
-    display: block;
-    font-size: 2rem;
-    font-weight: 800;
-    text-align: center;
+    .navbar-brand img {
+      height: 2.3rem;
+    }
   }
 
-  .time-left li {
+  .navbar-dark.bg-dark{
+    background-color: transparent !important;
+  }
+
+  .account {
+    padding-inline: 10px;
+    border-left: solid 2px rgba(255, 255, 255, 0.4);
+  }
+
+  .account a i {
+    padding-left: 5px;
+  }
+
+  .account .drowdown-menu {
+    margin-inline: 5px;
+    color: white;
+    background-color: transparent;
+  }
+
+  .state {
+    padding-inline: 20px;
+    padding-block: 2px;
+    border-left: solid 1.5px rgba(255, 255, 255, 0.7);
+  }
+
+  .state i {
+    padding-left: 5px;
+  }
+
+  .notification {
     position: relative;
+    margin-inline: 20px;
   }
 
-  .time-left li:not(:last-child) span::after {
-    content: ":";
+  .notification::before {
+    content: "";
     position: absolute;
-    left: -40px;
-    top: -8px;
-    font-size: 3rem;
-    color: white;
+    top: -1px;
+    right: 1px;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #cc0000;
+    border: white solid 2px;
+    border-radius: 50%;
   }
 
-  @media (max-width: 991px) {
-    .info h1 {
-      font-size: 1.2rem;
-      margin-inline: 15px;
+  .search {
+    border-right: solid 2.5px rgba(255, 255, 255, 0.7);
+    padding-right: 35px;
+    margin-right: 0px;
+    cursor: pointer;
+  }
+
+  .search input {
+    border-radius: 15px;
+    width: 100px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+  }
+
+  .search input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
+
+  button.language {
+    color: white;
+    padding: 7px 20px;
+    border-radius: 0 15px 0 15px;
+    background-color: $gold;
+    margin-left: 10px;
+    font-weight: 700;
+  }
+
+  .navbar-toggler-icon{
+    color: white !important;
+    border-color: white;
+  }
+
+  @media (max-width: 767px) {
+    .navbar-collapse {
+      margin-top: 40px;
+    }
+    .navbar-brand img {
+      height: 25px;
     }
 
-    .info a {
-      font-size: .8rem;
-      padding-inline: 30px;
+   .navbar-nav{
+     display: none;
+   }
+
+    .account,
+    .state {
+      padding-right: 0;
     }
 
-    .info .time-left {
-      width: 250px;
+    .notification {
+      margin-inline: 0;
     }
 
-    .info span {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-
-    }
-
-    .time-left li:not(:last-child) span::after {
-      font-size: 1rem;
-      left: -10px;
-      top: 1px;
+    .search,
+    .notification,
+    .state,
+    .account {
+      border: none;
     }
   }
 }
+
+nav {
+  .about-award {
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+    color: white;
+  }
+
+  .about-award-hidden {
+    display: none;
+  }
+
+  .about-award a {
+    padding: 10px 15px;
+    transition: all 0.3s linear;
+  }
+
+  .about-award a.active,
+  .about-award a:hover {
+    background-color: $gold;
+    border-radius: 5px;
+  }
+  
+}
+
+@media (max-width: 991px) {
+  nav {
+    display: none;
+  }
+}
+

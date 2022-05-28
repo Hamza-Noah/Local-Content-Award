@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="assets/style/all.min.css" />
-  <link rel="stylesheet" href="assets/style/normalize.css" />
+  <link rel="stylesheet" href="assets/style/iconfont.css" />
+  <link rel="stylesheet" href="assets/style/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/style/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/style/owl.theme.default.min.css">
   <link rel="stylesheet" href="assets/style/main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,107 +22,137 @@
 <body>
   <!-- Start Header -->
   <header>
-    <div class="uppperbar">
-      <div class="container">
-        <div class="row">
-          <div class="navbar-brand">
-            <a href="#">
-              <img src="assets/images/logo.svg" alt="" />
-            </a>
-          </div>
-          <div class="options">
-            <ul class="row">
-              <li>
-                <button class="language">English</button>
-              </li>
-              <li>
-                <div class="account">
-                  <a href="#">
-                    <i class="fa-solid fa-user"></i>
-                    محمد
-                  </a>
-                  <button class="drowdown-menu">
-                    <i class="fa-solid fa-caret-down"></i>
+    <div class="uppperbar bg-dark navbar-dark">
+      <div class="container p-0">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#"><img src="assets/images/logo.svg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 options">
+                <li class="nav-item d-flex align-items-center">
+                  <button class="language">
+                    <!-- <img src="assets/images/globe.svg" alt=""> -->
+                    English
                   </button>
-                </div>
-              </li>
-              <li>
-                <div class="state">
-                  <i class="fas fa-desktop"></i>
-                  لوحة التحكم
-                </div>
-              </li>
-              <li>
-                <div class="notification">
-                  <i class="fa-regular fa-bell fa-2xl"></i>
-                </div>
-              </li>
-              <div class="search">
-                <input type="search" placeholder="بحث" />
-              </div>
-            </ul>
+                </li>
+                <li class="nav-item d-flex align-items-center">
+                  <div class="account">
+                    <a href="#">
+                      <i class="fa-solid fa-user"></i>
+                      محمد
+                    </a>
+                    <button class="drowdown-menu">
+                      <i class="fa-solid fa-caret-down"></i>
+                    </button>
+                  </div>
+                </li>
+                <li class="nav-item d-flex align-items-center">
+                  <div class="state">
+                    <i class="icon feather icon-file-text"></i>
+                    متابعة طلبي
+                  </div>
+                </li>
+                <li class="nav-item d-flex align-items-center">
+                  <div class="notification">
+                    <i class="fa-regular fa-bell fa-xl"></i>
+                  </div>
+                </li>
+                <li class="nav-item d-flex align-items-center">
+                  <div class="search">
+                    <input type="search" placeholder="بحث" />
+                  </div>
+                </li>
+              </ul>
+              <ul class="about-award-hidden">
+                <li><a href="#">عن الجائزة</a></li>
+                <li><a href="#">مسارات الجائزة</a></li>
+                <li><a href="#">لجان التحكيم</a></li>
+                <li><a href="#">الفائزون السابقون</a></li>
+                <li><a href="#">شركاء النجاح</a></li>
+                <li><a href="#">تواصل معنا</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
+        </nav>
       </div>
-    </div>
     </div>
     <nav>
       <div class="container">
-        <ul>
-          <div class="row">
-            <li><a href="#">عن الجائزة</a></li>
-            <li><a href="#">مسارات الجائزة</a></li>
-            <li><a href="#">لجان التحكيم</a></li>
-            <li><a href="#">الفائزون السابقون</a></li>
-            <li><a href="#">شركاء النجاح</a></li>
-            <li><a href="#">تواصل معنا</a></li>
-          </div>
+        <ul class="about-award d-flex justify-content-between">
+          <li><a href="#" class="active">عن الجائزة</a></li>
+          <li><a href="#">مسارات الجائزة</a></li>
+          <li><a href="#">لجان التحكيم</a></li>
+          <li><a href="#">الفائزون السابقون</a></li>
+          <li><a href="#">شركاء النجاح</a></li>
+          <li><a href="#">تواصل معنا</a></li>
         </ul>
       </div>
     </nav>
-    <div class="landing">
-      <div class="info">
-        <h1>لأنك عنصر مساهم في تنمية المحتوى المحلي بأقتصادنا الوطني</h1>
-        <a href="#">تقدم الأن</a>
-        <div class="time-left">
-          <ul>
-            <li>
-              <div class="days">
-                <span></span>
-                <p>يوم</p>
-              </div>
-            </li>
-            <li>
-              <div class="hours">
-                <span></span>
-                <p>ساعة</p>
-              </div>
-            </li>
-            <li>
-              <div class="minutes">
-                <span></span>
-                <p>دقيقة</p>
-              </div>
-            </li>
-            <li>
-              <div class="seconds">
-                <span></span>
-                <p>ثانية</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </header>
   <!-- End Header -->
   <!-- Start Main -->
   <main>
-    <section class="award">
-      <div class="container">
-        <div class="row">
+    <!-- Start Landing -->
+    <section class="landing">
+      <div id="landing-carousel" class="owl-carousel owl-theme">
+        <div class="item" style="background-image: url(assets/images/banner-1.jpg)">
           <div class="info">
-            <h2>جائزة <span>المحتوى المحلي</span></h2>
+            <h1 class="text-white">لأنك عنصر مساهم في تنمية المحتوى المحلي باقتصادنا الوطني</h1>
+            <a class="text-white" href="#">تقدم الأن</a>
+            <div class="time-left">
+              <ul>
+                <li>
+                  <div class="days">
+                    <span></span>
+                    <p>يوم</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="hours">
+                    <span></span>
+                    <p>ساعة</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="minutes">
+                    <span></span>
+                    <p>دقيقة</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="seconds">
+                    <span></span>
+                    <p>ثانية</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(assets/images/banner-2.jpg)">
+          <div class="info">
+            <h1 class="text-white">لأنك عنصر مساهم في تنمية المحتوى المحلي بأقتصادنا الوطني</h1>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(assets/images/banner-3.jpg)">
+          <div class="info">
+            <h1 class="text-white">لأنك عنصر مساهم في تنمية المحتوى المحلي بأقتصادنا الوطني</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Landing -->
+    <!-- Start Award -->
+    <section class="award m-auto">
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <div class="info">
+            <h2 class="fw-bolder">جائزة <span>المحتوى المحلي</span></h2>
             <p>
               هي احدى مبادرات هيئة المحتوى المحلي والمشتريات الحكومية التي
               تهدف الى تحفيز القطاعين العام والخاص والموردين والشركات على
@@ -130,7 +163,7 @@
               الجائزة</a>
           </div>
           <div class="img">
-            <img height="400px" src="assets/images/award.png" alt="" />
+            <img src="assets/images/award.png" alt="" />
           </div>
         </div>
       </div>
@@ -140,7 +173,7 @@
     <section class="paths">
       <div class="container">
         <div class="head-section">
-          <h2>مسارات الجائزة</h2>
+          <h2 class="font-weight-bolder">مسارات الجائزة</h2>
           <p>
             نص بسيط عن مسارات الجائزة بشكل مختصر. يمهد الحديث عن مسارات
             الجائزة بشكل مختصر. يمهد الحديث عن المسارات
@@ -149,7 +182,7 @@
       </div>
       <div class="path governmental-entities">
         <div class="container">
-          <div class="row">
+          <div class="d-flex align-items-center">
             <div class="path-title">
               <h3>الجهات الحكومية</h3>
               <p>جائزة التميز بالألتزام</p>
@@ -162,14 +195,14 @@
                 المدة الزمنية المحددة مسبقا ، والتأكد من تضمينهـا للمتطلبات
                 اللازمة المحددة مسبقا
               </p>
-              <a href="#">المزيد عن جائزة الجهات الحكومية </a>
+              <a href="#" class="text-white">المزيد عن جائزة الجهات الحكومية </a>
             </div>
           </div>
         </div>
       </div>
       <div class="path prive-facilities">
         <div class="container">
-          <div class="row">
+          <div class="d-flex align-items-center">
             <div class="path-title">
               <h3>المنشأت الخاصة</h3>
               <p>جائزة التميز بالمحتوى المحلي</p>
@@ -187,15 +220,14 @@
               <p>
                 - نطاق الاعتماد على سلاسل الإمداد الوطنية
               </p>
-              </p>
-              <a href="#">المزيد عن جائزة المنشأت الخاصة </a>
+              <a href="#" class="text-white">المزيد عن جائزة المنشأت الخاصة </a>
             </div>
           </div>
         </div>
       </div>
       <div class="path individuals">
         <div class="container">
-          <div class="row">
+          <div class="d-flex">
             <div class="path-title">
               <h3>الجهات الحكومية</h3>
               <p>جائزة التميز بالألتزام</p>
@@ -208,8 +240,7 @@
                 لـجـنـة التقييم ، ومن ثم يتم تحديد الفائز من خلال تصـويت
                 .الحمهـور
               </p>
-
-              <a href="#">المزيد عن جائزة الأفراد </a>
+              <a href="#" class="text-white">المزيد عن جائزة الأفراد </a>
             </div>
           </div>
         </div>
@@ -226,29 +257,17 @@
             الجائزة بشكل مختصر. يمهد الحديث عن المسارات
           </p>
         </div>
-        <div class="row">
-          <div class="column ">
-            <div class="winner-feature">
-              <div class="img-feature">
-                <img src="assets/images/documents.png" alt="">
+        <ul>
+          <li>
+            <div class="winner-feature position-relative d-flex justify-content-between">
+              <div class="feature position-relativew">
+                <span class="text-light ">1</span>
+                <p class="text-light ">تقدم المتنافسين</p>
               </div>
-              <div class="img">
-                <img src="assets/images/competetion.jpeg" alt="">
-              </div>
-              <div class="info">
-                <p>
-                  شرح مبسط عن هذه المرحلةوتاريخ بدايتها وتاريخ نهايتها والشروط والمسارات في حال وجودها. وهو نص يمكن
-                  ادخاله من قبل الأدارة المسئولة عن المحتوى في الهيئة. كما يمكن تعديله بحسب الحاجة
-                  <a href="#"><i class="fa-solid fa-arrow-left-long"></i> أقرأ المزيد</a>
-                </p>
-              </div>
-            </div>
-            <div class="winner-feature">
-              <div class="img-feature">
-                <img src="assets/images/ratings.png" alt="">
-              </div>
-              <div class="img">
-                <img src="assets/images/evaluating.jpeg" alt="">
+              <div class="feature-icon-wrapper">
+                <div class="img">
+                  <img src="assets/images/documents.svg" alt="">
+                </div>
               </div>
               <div class="info">
                 <p>
@@ -258,27 +277,17 @@
                 </p>
               </div>
             </div>
-            <div class="winner-feature">
-              <div class="img-feature">
-                <img src="assets/images/court.png" alt="">
+          </li>
+          <li>
+            <div class="winner-feature position-relative  d-flex justify-content-between">
+              <div class="feature position-relative">
+                <span class="text-light ">2</span>
+                <p class="text-light ">تقييم المتنافسين</p>
               </div>
-              <div class="img">
-                <img src="assets/images/judge.jpeg" alt="">
-              </div>
-              <div class="info">
-                <p>
-                  شرح مبسط عن هذه المرحلةوتاريخ بدايتها وتاريخ نهايتها والشروط والمسارات في حال وجودها. وهو نص يمكن
-                  ادخاله من قبل الأدارة المسئولة عن المحتوى في الهيئة. كما يمكن تعديله بحسب الحاجة
-                  <a href="#"><i class="fa-solid fa-arrow-left-long"></i> أقرأ المزيد</a>
-                </p>
-              </div>
-            </div>
-            <div class="winner-feature">
-              <div class="img-feature">
-                <img src="assets/images//excellent.png" alt="">
-              </div>
-              <div class="img">
-                <img src="assets/images/excellence.png" alt="">
+              <div class="feature-icon-wrapper">
+                <div class="img">
+                  <img src="assets/images/rating.svg" alt="">
+                </div>
               </div>
               <div class="info">
                 <p>
@@ -288,16 +297,76 @@
                 </p>
               </div>
             </div>
+          </li>
+          <li>
+            <div class="winner-feature position-relative  d-flex align-items-center justify-content-between">
+              <div class="feature position-relative">
+                <span class="text-light ">3</span>
+                <p class="text-light text-center ">التحيكم<br>وتحديد الفائزين</p>
+              </div>
+              <div class="feature-icon-wrapper">
+                <div class="img">
+                  <img src="assets/images/court.svg" alt="">
+                </div>
+              </div>
+              <div class="info">
+                <p>
+                  شرح مبسط عن هذه المرحلةوتاريخ بدايتها وتاريخ نهايتها والشروط والمسارات في حال وجودها. وهو نص يمكن
+                  ادخاله من قبل الأدارة المسئولة عن المحتوى في الهيئة. كما يمكن تعديله بحسب الحاجة
+                  <a href="#"><i class="fa-solid fa-arrow-left-long"></i> أقرأ المزيد</a>
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="winner-feature position-relative  d-flex justify-content-between">
+              <div class="feature">
+                <span class="text-light   ">4</span>
+                <p class="text-light">تكريم الفائزين</p>
+              </div>
+              <div class="feature-icon-wrapper">
+                <div class="img">
+                  <img src="assets/images//excellence.svg" alt="">
+                </div>
+              </div>
+              <div class="info">
+                <p>
+                  شرح مبسط عن هذه المرحلةوتاريخ بدايتها وتاريخ نهايتها والشروط والمسارات في حال وجودها. وهو نص يمكن
+                  ادخاله من قبل الأدارة المسئولة عن المحتوى في الهيئة. كما يمكن تعديله بحسب الحاجة
+                  <a href="#"><i class="fa-solid fa-arrow-left-long"></i> أقرأ المزيد</a>
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- End Journey -->
+    <!-- Start Success Partners -->
+    <section class="success-partners mb-5 text-center">
+      <div class="container">
+        <div id="partners-carousel" class="owl-carousel owl-theme">
+          <div class="item me-5 ms-5">
+            <img height="65px" src="assets/images/SVG/الهيئة العامة للإحصاء.svg" alt="">
+          </div>
+          <div class="item">
+            <img height="65px" src="assets/images/SVG/partner1.svg" alt="">
+          </div>
+          <div class="item">
+            <img height="65px" src="assets/images/SVG/اتحاد-الغرف-السعودية.svg" alt="">
+          </div>
+          <div class="item">
+            <img height="65px" src="assets/images/SVG/الهيئة السعودية للمواصفات والمقاييس والجودة.svg" alt="">
           </div>
         </div>
       </div>
     </section>
-    <!-- End Journey -->
+    <!-- End Success Partners -->
   </main>
   <!-- Start Footer -->
   <footer>
     <div class="container">
-      <div class="row">
+      <div class="d-flex justify-content-between info-and-links">
         <div class="column info">
           <div class="img">
             <img src="assets/images/logo.svg" alt="">
@@ -320,23 +389,42 @@
           </ul>
         </div>
         <div class="column contacts">
-          <ul class="social-icons">
-            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+          <ul class="social-icons ps-0">
+            <li><a href="#"><i class="icon feather icon-facebook"></i></a></li>
+            <li><a href="#"><i class="icon feather icon-twitter"></i></a></li>
+            <li><a href="#"><i class="icon feather icon-youtube"></i></a></li>
+            <li><a href="#"><i class="icon feather icon-linkedin"></i></a></li>
           </ul>
           <address>
-            <a href="#mailto:lc.award@lcgpa.gov.sa"><i class="fa-solid fa-envelope-open"></i>lc.award@lcgpa.gov.sa</a>
+            <a href="#mailto:lc.award@lcgpa.gov.sa"><i class="icon feather icon-mail"></i>lc.award@lcgpa.gov.sa</a>
           </address>
           <address>
-            <a href="#mailto:lc.award@lcgpa.gov.sa"><i class="fa-solid fa-phone"></i>19915</a>
+            <a href="#mailto:lc.award@lcgpa.gov.sa"><i class="icon feather icon-phone-call"></i>19915</a>
           </address>
+        </div>
+      </div>
+      <div class="rights pt-5 fw-bolder">
+        <div class="d-flex justify-content-between flex-wrap">
+          <div class="privacy-and-terms">
+            <p>شروط الأستخدام <span class="d-inline-block pe-2 ps-2">|</span> سياسة الخصوصية</p>
+            <p>جميع الحقوق محفوظة ل<span class="gold">هيئة المحتوى المحلي والمشتريات الحكومية</span> &copy; 2022</p>
+          </div>
+          <div class="brand-info">
+            <p class="d-inline-block">
+              جائزة المحتوى المحلي هي مبادرة مشغلة من
+            </p>
+            <a href="#">
+              <img width="200px" src="assets/images/org-logo.svg" alt="">
+            </a>
+          </div>
         </div>
       </div>
   </footer>
   <!-- End Footer -->
-  <script src="main.js"></script>
+  <script src="JS/jquery-3.6.0.min.js"></script>
+  <script src="JS/owl.carousel.min.js"></script>
+  <script src="JS/bootstrap.bundle.min.js"></script>
+  <script src="JS/main.js"></script>
 </body>
 
 </html>

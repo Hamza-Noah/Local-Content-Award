@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "Almarai";
+  src: url("../fonts/Almarai-Bold.ttf");
+  src: url("../fonts/Almarai-Bold.woff"), url("../fonts/Almarai-Bold.woff2");
+  src: url("../fonts/Almarai-Regular.ttf");
+  src: url("../fonts/Almarai-Regular.woff"),
+    url("../fonts/Almarai-Regular.woff2");
+}
+
+@import "colors";
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -5,14 +16,12 @@
 }
 
 body {
-  direction: rtl;
-  font-family: "Cairo", sans-serif;
-  height: 2000px;
-  overflow-x: hidden;
+  font-family: "Almarai";
 }
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 button {
@@ -21,88 +30,38 @@ button {
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: pointer;
 }
 
-.container {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: auto;
-  margin-left: auto;
+.gold {
+  color: $gold;
 }
-
-// media rules for conatiner 
-// extra small screens 
-@media(max-width: 575px) {
-  .container {
-    width: 90%;
-    padding-inline: 00px !important;
-  }
-}
-
-// small screen rules 
-@media (min-width: 768px) and(max-width: 991px) {
-  .container {
-    width: 750px;
-
-  }
-}
-
-// medium screen rules 
-@media (min-width: 992px) and (max-width: 1199px) {
-  .container {
-    width: 970px;
-  }
-}
-
-// large screen rules 
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-
-// End media rules
-
-
-.row {
-  display: flex;
-}
-
-@import "colors";
 
 .head-section {
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-bottom: 100px;
 
   h2 {
-    position: relative;
+    margin-bottom: 40px;
     color: $bold-blue;
     font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-weight: bolder;
+  }
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 120px;
-      height: 5px;
-      background-color: $gold;
-    }
-
-    &::before {
-      right: 300px;
-    }
-
-    &::after {
-      left: 300px;
-    }
-
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 5px;
+    background-color: $gold;
   }
 
   p {
@@ -112,36 +71,36 @@ a {
 
   @media (max-width: 767px) {
     & {
-      margin-bottom: 30px;
+      margin-bottom: 100px;
     }
 
     h2 {
-      font-size: 1.8rem !important;
+      font-size: 1.6rem !important;
     }
 
-    h2::before,
-    h2::after {
-      width: 90px;
-    }
+    // h2::before,
+    // h2::after {
+    //   width: 35%;
+    //   height: 3px;
+    // }
 
-    h2::before {
-      right: 240px;
-    }
+    // h2::before {
+    //   right: 180px;
+    // }
 
-    h2::after {
-      left: 240px;
-    }
+    // h2::after {
+    //   left: 180px;
+    // }
 
     p {
       font-size: 1rem;
-      text-align: center
+      text-align: center;
     }
   }
 }
 
-
-@import "upperbar";
 @import "header";
+@import "landing";
 @import "award";
 @import "paths";
 @import "journey";
