@@ -7,7 +7,8 @@
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -38,9 +39,16 @@ a {
 
 .head-section {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 100px;
 }
 
@@ -56,7 +64,8 @@ a {
   position: absolute;
   bottom: -30px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 120px;
   height: 5px;
   background-color: #b3a16d;
@@ -177,7 +186,9 @@ header button.language {
 }
 
 header .nav .about-award {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 70%;
   margin: auto;
   padding-bottom: 15px;
@@ -192,6 +203,7 @@ header .nav .about-award-hidden {
 
 header .nav .about-award a {
   padding: 10px 15px;
+  -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 
@@ -265,6 +277,7 @@ header .about-award-hidden {
   right: 0;
   width: 100%;
   height: 162px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
   z-index: 2;
 }
@@ -277,6 +290,7 @@ header .about-award-hidden {
   width: 100%;
   height: 23.5vh;
   background: black;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 100%);
   z-index: 2;
 }
@@ -286,7 +300,8 @@ header .about-award-hidden {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 2;
 }
 
@@ -303,11 +318,16 @@ header .about-award-hidden {
   padding: 20px;
   position: absolute;
   top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .landing .owl-carousel .owl-nav button.owl-next,
@@ -349,8 +369,12 @@ header .about-award-hidden {
 }
 
 .landing .time-left ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: #3f6f87;
   margin: 0;
 }
@@ -407,9 +431,15 @@ header .about-award-hidden {
     width: 250px;
   }
   .landing .info span {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size: 1.2rem;
   }
   .landing .time-left li:not(:last-child) span::after {
@@ -425,7 +455,9 @@ header .about-award-hidden {
 
 .award .row {
   position: relative;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .award .info {
@@ -490,8 +522,13 @@ header .about-award-hidden {
     width: 5px;
   }
   .award .d-flex {
-    flex-flow: wrap column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: wrap column;
+            flex-flow: wrap column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 15px;
   }
   .award .info {
@@ -529,7 +566,9 @@ header .about-award-hidden {
   height: 50px;
   background-color: white;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -557,7 +596,9 @@ header .about-award-hidden {
 
 .paths .d-flex {
   position: relative;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
 }
 
@@ -580,7 +621,9 @@ header .about-award-hidden {
   padding: 30px;
   text-align: center;
   z-index: 2;
-  transition-delay: 0.3s !important;
+  -webkit-transition-delay: 0.3s !important;
+          transition-delay: 0.3s !important;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -602,8 +645,10 @@ header .about-award-hidden {
   background-color: rgba(255, 255, 255, 0.8);
   position: absolute;
   opacity: 0;
+  -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  transition-delay: 0.3s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 
 .paths .path-info p {
@@ -616,6 +661,8 @@ header .about-award-hidden {
   display: block;
   margin: 20px auto 0;
   padding: 10px 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 0 15px 0 15px;
   background-color: #0faad0;
@@ -630,11 +677,15 @@ header .about-award-hidden {
     padding-bottom: 50px;
   }
   .paths .d-flex {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .paths .path-title {
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   .paths .path-info {
     top: 20%;
@@ -663,21 +714,25 @@ header .about-award-hidden {
 @media (min-width: 992px) {
   .paths .path-title {
     right: 50%;
-    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
     padding: 20px;
   }
   .paths .path:hover .path-title {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     right: 13%;
   }
   .paths .path:hover .path-info {
     opacity: 1;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     left: 0;
   }
   .paths .path-info {
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     width: 600px;
     padding: 40px;
   }
@@ -693,28 +748,44 @@ header .about-award-hidden {
 }
 
 .journey .winner-feature {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .journey li:nth-child(2) .winner-feature,
 .journey li:last-child .winner-feature {
-  flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .journey .feature {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 240px;
   width: 240px;
+  -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   padding: 60px 0;
 }
 
 .journey .feature p {
   margin-top: -20px;
+  -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   font-size: 1.3rem;
   font-weight: bolder;
@@ -728,6 +799,7 @@ header .about-award-hidden {
   font-size: 2rem;
   font-weight: bolder;
   opacity: 0;
+  -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
 
@@ -757,19 +829,33 @@ header .about-award-hidden {
 }
 
 .journey .feature-icon-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   left: 50%;
-  transform: translate(-50%);
-  flex: 1;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .journey .feature-icon-wrapper .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   background-color: #b3a16d;
   height: 90px;
@@ -790,10 +876,12 @@ header .about-award-hidden {
   color: #54565b;
   font-weight: bolder;
   overflow: hidden;
+  -webkit-transition: all ease-in 0.3s;
   transition: all ease-in 0.3s;
 }
 
 .journey .info p {
+  -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   background-color: white;
 }
@@ -815,7 +903,8 @@ header .about-award-hidden {
 }
 
 .journey li:nth-child(odd):hover .feature {
-  box-shadow: 20px 20px #b3a16d;
+  -webkit-box-shadow: 20px 20px #b3a16d;
+          box-shadow: 20px 20px #b3a16d;
 }
 
 .journey li:nth-child(odd):hover .feature p {
@@ -827,7 +916,8 @@ header .about-award-hidden {
 }
 
 .journey li:nth-child(even):hover .feature {
-  box-shadow: -20px 20px #b3a16d;
+  -webkit-box-shadow: -20px 20px #b3a16d;
+          box-shadow: -20px 20px #b3a16d;
 }
 
 .journey li:nth-child(even):hover .feature p {
@@ -840,7 +930,10 @@ header .about-award-hidden {
 
 @media (max-width: 767px) {
   .journey .winner-feature {
-    flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
   .journey .feature-icon-wrapper {
     display: none;
@@ -853,8 +946,10 @@ header .about-award-hidden {
     left: 0%;
     right: 50%;
     bottom: -95%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     background-color: #b3a16d;
+    -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
   }
   .journey .info p {
@@ -862,7 +957,8 @@ header .about-award-hidden {
     padding: 20px;
     border: solid 2px #b3a16d !important;
     font-size: 0.8rem;
-    transform: translateY(-120%);
+    -webkit-transform: translateY(-120%);
+            transform: translateY(-120%);
   }
   .journey li:nth-child(odd) .info p {
     border-radius: 20px 0 20px 0;
@@ -881,7 +977,8 @@ header .about-award-hidden {
     margin-bottom: 100px;
   }
   .journey li:hover .info p {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -899,7 +996,8 @@ header .about-award-hidden {
     height: 3px;
     width: 200px;
     top: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
   }
   .journey li:nth-child(odd) .feature-icon-wrapper::before {
     left: 200px;
@@ -912,23 +1010,28 @@ header .about-award-hidden {
     width: 3px;
     bottom: -105px;
     right: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
   }
   .journey .info {
     width: 42%;
     font-size: 0.8rem;
   }
   .journey li:nth-child(odd) .info p {
-    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   .journey li:nth-child(even) .info p {
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   .journey li:nth-child(odd):hover p {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   .journey li:nth-child(even):hover p {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -956,6 +1059,8 @@ footer p {
 }
 
 footer .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -976,6 +1081,8 @@ footer .contacts {
 footer .contacts .social-icons {
   padding-bottom: 20px;
   border-bottom: solid 0.5px rgba(255, 255, 255, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 20px;
 }
@@ -1014,7 +1121,8 @@ footer .rights p {
 @media (max-width: 768px) {
   footer .info-and-links,
   footer .rights {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   footer .column {
     width: 100% !important;
@@ -1026,7 +1134,9 @@ footer .rights p {
     width: 100%;
   }
   footer .contacts .social-icons {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   footer .contacts address {
     text-align: center;
