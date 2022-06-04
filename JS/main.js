@@ -56,7 +56,6 @@ $(document).ready(function () {
     dots: true,
     loop: true,
     // smartSpeed :900,
-    nav: true,
     navText: [
       "<img src='../assets/images/arrow-right.svg'>",
       "<img src='../assets/images/arrow-left.svg'>",

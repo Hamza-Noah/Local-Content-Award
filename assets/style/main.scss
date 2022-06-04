@@ -78,20 +78,6 @@ a {
       font-size: 1.6rem !important;
     }
 
-    // h2::before,
-    // h2::after {
-    //   width: 35%;
-    //   height: 3px;
-    // }
-
-    // h2::before {
-    //   right: 180px;
-    // }
-
-    // h2::after {
-    //   left: 180px;
-    // }
-
     p {
       font-size: 1rem;
       text-align: center;
@@ -99,9 +85,9 @@ a {
   }
 }
 
-@import "header";
-@import "landing";
-@import "award";
-@import "paths";
-@import "journey";
-@import "footer";
+@import "sections/header";
+@import "sections/landing";
+@import "sections/award";
+@import "sections/paths";
+@import "sections/journey";
+@import "sections/footer";
